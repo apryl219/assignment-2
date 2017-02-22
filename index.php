@@ -1,3 +1,4 @@
+<?php require('division.php'); ?>
 <?php require('a2.php'); ?>
 <!DOCTYPE html>
 <html>
@@ -29,7 +30,7 @@
 		<input type="submit" value="Calculate"> 
 	</form>
 	
-	<div>Each person owes: $<? echo ($total); ?></div>
+	<div>Each person owes: $<? var_export($total); ?></div>
 	<div><?= ($feedback); ?></div>
 </body>
 </html>

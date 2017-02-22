@@ -1,9 +1,13 @@
 <?php
-require('division.php');
+//require('division.php');
 $people = (isset($_GET['people']) ? $_GET['people'] : null);
 $tab = (isset($_GET['tab']) ? $_GET['tab'] : null);
 $service = (isset($_GET['service']) ? $_GET['service'] : null);
 $check = (isset($_GET['round']) ? $_GET['round'] : null);
+$total;
+settype($total, 'int');
+settype($total, 'float');
+
 
    	if ($service == 'excellent') {
 		$feedback = "We're so happy you enjoyed your meal!";
@@ -18,7 +22,7 @@ $check = (isset($_GET['round']) ? $_GET['round'] : null);
 	
 	
 
-	$total = new Division();
-	$total->new_division();
+	#$total = new Division();
+	#$total->new_division();
  
 
