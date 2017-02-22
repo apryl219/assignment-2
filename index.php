@@ -1,5 +1,6 @@
-<?php require('division.php'); ?>
-<?php require('a2.php'); ?>
+
+<?php require('working.php'); ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +19,7 @@
 		<label for="tab">How much was the tab?</label>
 		<input type="text" name="tab">
 		<br>
-		<label for="service">How was the service?</label>
+		<label for="service" method='POST'>How was the service?</label>
 			<select name="service" id="">
 				<option value="excellent">Excellent</option>
 				<option value="fair">Fair</option>
@@ -30,7 +31,9 @@
 		<input type="submit" value="Calculate"> 
 	</form>
 	
-	<div>Each person owes: $<? var_export($total); ?></div>
+	<div>Each person owes: $ <? echo $total; ?></div>
+	
 	<div><?= ($feedback); ?></div>
+	
 </body>
 </html>
