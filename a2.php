@@ -19,6 +19,5 @@ $total = null;
 		}
 	
  
-$feedback = new Service();
-
-var_dump('$feedback');
+$feedback = new Service;
+$feedback->message;

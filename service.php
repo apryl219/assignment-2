@@ -7,18 +7,15 @@ class Service {
 
     public function setLevel() {
 
-            $this->serviceLevel = (isset($_GET['service']) ? $_GET['service'] : null);
+        $this->serviceLevel = (isset($_GET['service']) ? $_GET['service'] : null);
     }
         
     public function getLevel() {
-       
         return $this->serviceLevel;
     }
 
     public function setMessage() {
-
         if ($this->serviceLevel == 'excellent') {
-
             $this->message = "We're so happy you enjoyed your meal!";
         }
         elseif ($this->serviceLevel == 'fair') {
@@ -34,5 +31,3 @@ class Service {
     }
 }
 
-var_dump('$serviceLevel');
-var_dump('$message');
