@@ -1,4 +1,3 @@
-
 <?php require('working.php'); ?>
 
 <!DOCTYPE html>
@@ -33,7 +32,7 @@
 	
 	<div>Each person owes: $ <? echo $total; ?></div>
 	
-	<div><?= ($feedback); ?></div>
+	<div><?= $feedback; ?></div>
 	
 </body>
 </html>

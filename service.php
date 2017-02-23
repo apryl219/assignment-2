@@ -2,19 +2,37 @@
 
 class Service {
 
-public function __construct() {
+   public $serviceLevel;
+   public $message;
 
-$service = (isset($_GET['service']) ? $_GET['service'] : null);
-$feedback = (isset($_POST['service']) ? $_POST['service'] : null);
+    public function setLevel() {
 
-   	if ($service == 'excellent') {
-		$feedback = "We're so happy you enjoyed your meal!";
-	}
-	elseif ($service == 'fair') {
-		$feedback = "What can we do to make your experience better?";
-	}
-	else {
-		$feedback = "We're so sorry you had an unacceptable experience. We will send a manager over to discuss the issue.";
-	}
-	}
+            $this->serviceLevel = (isset($_GET['service']) ? $_GET['service'] : null);
+    }
+        
+    public function getLevel() {
+       
+        return $this->serviceLevel;
+    }
+
+    public function setMessage() {
+
+        if ($this->serviceLevel == 'excellent') {
+
+            $this->message = "We're so happy you enjoyed your meal!";
+        }
+        elseif ($this->serviceLevel == 'fair') {
+            $this->message = "What can we do to make your experience better?";
+        }
+        else {
+            $this->message = "We're so sorry you had an unacceptable experience. We will send a manager over to discuss the issue.";
+        }
+    }
+
+    public function getMessage() {
+        return $this->message;
+    }
 }
+
+var_dump('$serviceLevel');
+var_dump('$message');
